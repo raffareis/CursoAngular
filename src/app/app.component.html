@@ -1,14 +1,22 @@
-<h2>Movie Data</h2>
-<div *ngFor="let movie of movies; let i = index" class="movie-item">
-    <div>
-        <div>
-            <h2>{{i}} {{movie.name}}</h2>
-        </div>
-        <div><span>{{movie.description}}</span></div>
-        <div><span>{{movie.rating}}</span></div>
-    </div>
-</div>
+<app-menu></app-menu>
 
-
-
+<app-rating (onRate)="userRated($event)"></app-rating>
 <!-- <router-outlet></router-outlet> -->
+<!-- 
+<div class="main-container">
+    <input type="file" style="display:none" #uploader />
+    <button (click)="uploader.click()">Upload</button>
+
+
+
+    <h2>In Theaters</h2>
+
+    <app-movies-list [movies]="moviesInTheater"></app-movies-list>
+
+
+    <h2>Future Releases</h2>
+
+
+    <app-movies-list [movies]="moviesFutureRelease"></app-movies-list>
+
+</div> -->
