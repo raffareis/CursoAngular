@@ -6,16 +6,20 @@
         There are no movies
     </ng-container>
     <ng-container content>
-        <div *ngFor="let movie of movies; let i = index" class="movie-item">
-            <div>
-                <img src="{{movie.image}}" alt="movie poster" height="100" />
-
+        <div class="movies-container">
+            <div *ngFor="let movie of movies; let i = index" class="movie-item">
                 <div>
-                    <h2>{{movie.name}} ({{movie.year}})</h2>
+                    <a>
+                        <img [src]="movie.image" alt="movie poster" />
+                    </a>
+                    <p>
+                        <a>{{movie.name}} ({{movie.year}})</a>
+                    </p>
+                    <div>
+                        <a mat-flat-button color="primary" (click)="editMovie(movie.id)">Edit</a>
+                        <button mat-flat-button color="warn" type="button" (click)="deleteMovie(movie.id)">Delete</button>
+                    </div>
                 </div>
-                <div><span>{{movie.description}}</span></div>
-                <div><span>{{movie.rating}}</span></div>
-                <button mat-raised-button color="warn" (click)="deleteMovie(movie.id)">Delete</button>
             </div>
         </div>
     </ng-container>

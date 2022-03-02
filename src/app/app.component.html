@@ -1,22 +1,10 @@
 <app-menu></app-menu>
 
-<app-rating (onRate)="userRated($event)"></app-rating>
-<!-- <router-outlet></router-outlet> -->
-<!-- 
+<!-- <app-rating (onRate)="userRated($event)"></app-rating> -->
+
 <div class="main-container">
-    <input type="file" style="display:none" #uploader />
-    <button (click)="uploader.click()">Upload</button>
+    <router-outlet></router-outlet>
 
 
 
-    <h2>In Theaters</h2>
-
-    <app-movies-list [movies]="moviesInTheater"></app-movies-list>
-
-
-    <h2>Future Releases</h2>
-
-
-    <app-movies-list [movies]="moviesFutureRelease"></app-movies-list>
-
-</div> -->
+</div>
