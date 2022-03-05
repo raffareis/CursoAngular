@@ -7,20 +7,19 @@
     </ng-container>
     <ng-container content>
         <div class="movies-container">
-            <div *ngFor="let movie of movies; let i = index" class="movie-item">
-                <div>
-                    <a>
-                        <img [src]="movie.image" alt="movie poster" />
-                    </a>
-                    <p>
-                        <a>{{movie.name}} ({{movie.year}})</a>
-                    </p>
-                    <div>
-                        <a mat-flat-button color="primary" (click)="editMovie(movie.id)">Edit</a>
-                        <button mat-flat-button color="warn" type="button" (click)="deleteMovie(movie.id)">Delete</button>
-                    </div>
-                </div>
-            </div>
+            <mat-card *ngFor="let movie of movies; let i = index" class="movie-item">
+                <img mat-card-lg-image [src]="movie.posterUrl" alt="movie poster" />
+                <mat-card-title>
+                    <a>{{movie.title}} ({{movie.releaseDate}})</a>
+                </mat-card-title>
+                <!-- <mat-card-content>
+                    {{movie.description}}
+                </mat-card-content> -->
+                <mat-card-actions>
+                    <a mat-flat-button color="primary" (click)="editMovie(movie.id)">Edit</a>
+                    <button mat-flat-button color="warn" type="button" (click)="deleteMovie(movie.id)">Delete</button>
+                </mat-card-actions>
+            </mat-card>
         </div>
     </ng-container>
 

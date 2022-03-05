@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { MovieDTO } from '../movies.models';
 
 
 @Component({
@@ -23,7 +24,7 @@ export class MoviesListComponent implements OnInit {
   }
 
   @Input()
-  movies: { id: number; name: string; year: number; rating: number; genre: string; description: string; image: string; }[] | undefined;
+  movies: MovieDTO[] | undefined;
 
 
 }

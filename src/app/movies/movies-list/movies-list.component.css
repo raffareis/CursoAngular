@@ -1,6 +1,7 @@
 .movie-item {
-    margin:10px;
-    border: 1px solid black;
+    margin-right:10px;
+    margin-bottom: 10px;
+    
     padding: 1rem;    
 }
 h2 {
@@ -12,17 +13,34 @@ h2 {
     flex-wrap: wrap;
     align-items: center;
 }
+
+mat-card-title {
+    width: 200px;
+    font-size: 17px;
+    height: 34px;
+}
+mat-card-content {
+    width: 200px;
+   
+    white-space: nowrap;
+    overflow: hidden;
+  text-overflow: ellipsis;
+}
 p {
     width: 200px;
     height: 44px;
     font-size: 15px;
     font-weight: bold;
 }
-img {
+.mat-card-lg-image {
+    width: 200px;
+    height: 300px;
+}
+/* img {
     --width: 325px;
     height: 300px;
     
-}
+} */
 button {
     margin-left: 1em;
     

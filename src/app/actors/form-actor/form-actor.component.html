@@ -1,0 +1,27 @@
+<form (submit)="submit()" [formGroup]="form">
+    <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input formControlName="name" matInput />
+
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Date of Birth</mat-label>
+        <input formControlName="dateOfBirth" matInput [matDatepicker]="picker" />
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+
+    </mat-form-field>
+
+    <h4>Select Picture</h4>
+    <app-input-image [urlCurrentImage]="model?.picture" (onImageSelected)="onImageSelected($event)"></app-input-image>
+
+    <h4>Biography</h4>
+    <app-input-markdown [markdownContent]="model?.biography" (changeMarkdown)="biographyChanged($event)"></app-input-markdown>
+
+    <mat-error *ngIf="form.invalid">{{getErrorMessageFieldName()}}</mat-error>
+    <div>
+        <button mat-raised-button color="primary" [disabled]="form.invalid" type="submit">Submit</button>
+        <a mat-stroked-button routerLink="/actors">Cancel</a>
+
+    </div>
+</form>

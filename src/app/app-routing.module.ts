@@ -13,6 +13,7 @@ import { EditMovieTheaterComponent } from './movie-theaters/edit-movie-theater/e
 import { IndexMovieTheatersComponent } from './movie-theaters/index-movie-theaters/index-movie-theaters.component';
 import { CreateMovieComponent } from './movies/create-movie/create-movie.component';
 import { EditMovieComponent } from './movies/edit-movie/edit-movie.component';
+import { MovieFilterComponent } from './movies/movie-filter/movie-filter.component';
 // import { UserListComponent } from './user/user-list/user-list.component';
 
 
@@ -32,6 +33,7 @@ const routes: Routes = [
 
   // { path: 'movies', component: IndexActorsComponent },
   { path: 'movies/create', component: CreateMovieComponent },
+  { path: 'movies/filter', component: MovieFilterComponent },
   { path: 'movies/edit/:id', component: EditMovieComponent },
 
   { path: '**', redirectTo: '', pathMatch: 'full' }

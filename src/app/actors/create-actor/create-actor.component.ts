@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActorCreationDTO, ActorDTO } from '../actors.models';
 
 @Component({
   selector: 'app-create-actor',
@@ -10,6 +12,12 @@ export class CreateActorComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
+
+  }
+
+  saveChanges(actorCreationDTO: ActorCreationDTO) {
+    console.log(actorCreationDTO);
   }
 
 }
